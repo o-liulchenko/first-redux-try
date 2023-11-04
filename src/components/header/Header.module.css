@@ -1,0 +1,11 @@
+.Header {
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 10px 0;
+}
+
+.headerSettings {
+  display: flex;
+}/*# sourceMappingURL=Header.module.css.map */

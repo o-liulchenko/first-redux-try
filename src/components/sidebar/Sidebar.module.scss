@@ -1,0 +1,47 @@
+$redLight: #EC4D2F;
+
+.Sidebar {
+    width: 250px;
+    padding: 10px 5px;
+    border-right: 1px solid $redLight;
+    display: flex;
+    flex-direction: column;
+}
+
+.userInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 10px;
+    margin-bottom: 15px;
+
+    .userPhoto {
+        font-size: 54px;
+    }
+
+    .userName {
+        font-size: 22px;
+        font-weight: 500;
+    }
+
+    .userPosition {
+        font-size: 14px;
+        font-weight: 500;
+    }
+
+    .userChangePositionBtn {
+        padding: 5px 10px;
+        color: white;
+    }
+}
+
+.sidebarMenu {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+    .sidebarMenuItem{
+        width: 100%;
+        text-align: left;
+        padding: 5px 10px;
+    }
+}

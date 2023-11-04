@@ -1,0 +1,48 @@
+body {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  color: white;
+  background-color: #1D1B2B;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+}
+
+ul,
+ol,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+}
+
+.App {
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+button {
+  padding: 16px 30px;
+  border: 2px solid #EC4D2F;
+  background: radial-gradient(50% 50% at 50% 50%, rgba(236, 77, 47, 0) 0%, rgba(236, 77, 47, 0.17) 100%);
+  border-radius: 15px;
+  color: white;
+}
+button:hover {
+  background: #EC4D2F;
+}
+button:active {
+  background: #B83922;
+}/*# sourceMappingURL=App.module.css.map */
