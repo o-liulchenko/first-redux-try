@@ -1,4 +1,4 @@
-$redLight: #EC4D2F;
+@import '../../mixins';
 
 .Sidebar {
     width: 250px;
@@ -30,6 +30,7 @@ $redLight: #EC4D2F;
     }
 
     .userChangePositionBtn {
+        @include button;
         padding: 5px 10px;
         color: white;
     }
@@ -40,6 +41,7 @@ $redLight: #EC4D2F;
     flex-direction: column;
     row-gap: 5px;
     .sidebarMenuItem{
+        @include button;
         width: 100%;
         text-align: left;
         padding: 5px 10px;

@@ -1,0 +1,18 @@
+$redLight: #EC4D2F;
+$redDark: #B83922;
+$redRadial: radial-gradient(50% 50% at 50% 50%, rgba(236, 77, 47, 0.00) 0%, rgba(236, 77, 47, 0.17) 100%);
+$bg: #1D1B2B;
+
+@mixin button(){
+    padding: 16px 30px;
+    border: 2px solid $redLight;
+    background: $redRadial;
+    border-radius: 15px;
+    color: white;
+    &:hover{
+        background: $redLight;
+    }
+    &:active{
+        background: $redDark;
+    }
+}

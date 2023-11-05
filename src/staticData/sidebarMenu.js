@@ -27,5 +27,5 @@ export const userInfo = {
 }
 
 export const contacts = {
-    phone: '1234567890'
+    phone: '+380931234567'
 }

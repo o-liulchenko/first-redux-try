@@ -4,11 +4,11 @@ export const Header = (props) => {
     console.log(props);
     return(
         <header className={styles.Header}>
-            <button>Показати/приховати меню</button>
+            <button className={styles.headerSettingsBtn}>Показати/приховати меню</button>
             <div className={styles.headerSettings}>
-                <a href={`tel:${props.contacts.phone}`}>{props.contacts.phone}</a>
-                <button>Українська</button>
-                <button>Вийти</button>
+                <a className={styles.headerContact} href={`tel:${props.contacts.phone}`}>{props.contacts.phone}</a>
+                <button className={styles.headerSettingsBtn}>Українська</button>
+                <button className={styles.headerSettingsBtn}>Вийти</button>
             </div>
         </header>
     )
