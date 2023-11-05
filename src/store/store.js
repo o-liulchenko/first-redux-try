@@ -1,6 +1,9 @@
-import { combineReducers } from "redux";
+import { combineReducers, createStore } from "redux";
+import { sidebarReducer } from "./sidebarReducer";
 
 
-// let reducers = combineReducers({
-//     sidebar: sidebarReducer
-// })
+let reducers = combineReducers({
+    sidebar: sidebarReducer
+});
+
+export let store = createStore(reducers);

@@ -4,7 +4,7 @@ export const Header = (props) => {
     console.log(props);
     return(
         <header className={styles.Header}>
-            <button className={styles.headerSettingsBtn}>Показати/приховати меню</button>
+            <button className={styles.headerSettingsBtn} onClick={props.sidebarVisibilitySwitchHandler}>Показати/приховати меню</button>
             <div className={styles.headerSettings}>
                 <a className={styles.headerContact} href={`tel:${props.contacts.phone}`}>{props.contacts.phone}</a>
                 <button className={styles.headerSettingsBtn}>Українська</button>
