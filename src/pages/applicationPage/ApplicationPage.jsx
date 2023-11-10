@@ -1,16 +1,15 @@
-// import logo from './logo.svg';
 import { useSelector } from 'react-redux';
-import style from './App.module.css';
-import { Main } from './components/main/Main';
-import { SidebarContainer } from './components/sidebar/SidebarContainer';
+import style from './ApplicationPage.module.css';
+import { Main } from '../../components/main/Main';
+import { SidebarContainer } from '../../components/sidebar/SidebarContainer';
 
-function App() {
+export const ApplicationPage = (props) => {
 
   const sidebarVisibility = useSelector(state => state.sidebar.sidebarVisibility);
   console.log(sidebarVisibility);
 
   return (
-    <div className={style.App}>
+    <div className={style.ApplicationPage}>
       {
         sidebarVisibility === 'show' ? <SidebarContainer /> : <></>
       }
@@ -18,5 +17,3 @@ function App() {
     </div>
   );
 }
-
-export default App;

@@ -3,9 +3,9 @@
 .Sidebar {
     width: 250px;
     padding: 10px 5px;
-    border-right: 1px solid $redLight;
     display: flex;
     flex-direction: column;
+    transition: 0.3s;
 }
 
 .userInfo {

@@ -1,7 +1,7 @@
-$redLight: #EC4D2F;
-$redDark: #B83922;
-$redRadial: radial-gradient(50% 50% at 50% 50%, rgba(236, 77, 47, 0.00) 0%, rgba(236, 77, 47, 0.17) 100%);
-$bg: #1D1B2B;
+$redLight: #007acc;
+$redDark: #04395e;
+$redRadial: radial-gradient(50% 50% at 50% 50%, rgba(4, 57, 94, 0.00) 0%, rgba(4, 57, 94, 0.17) 100%);
+$bg: #1e1e1e;
 
 @mixin button(){
     padding: 16px 30px;

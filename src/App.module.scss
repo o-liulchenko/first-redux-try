@@ -1,11 +1,15 @@
-@import 'mixins';
+@import './mixins';
+
+*{
+    box-sizing: border-box;
+}
 
 body {
     margin: 0;
     font-family: 'Montserrat', sans-serif;
     font-size: 16px;
     color: white;
-    background-color: #1D1B2B;
+    background-color: $bg;
 }
 
 h1,
@@ -30,8 +34,5 @@ button {
 }
 
 .App {
-    display: flex;
-    justify-content: center;
-    min-height: 100vh;
-    width: clamp(375px, 100vw, 1920px);
+    
 }

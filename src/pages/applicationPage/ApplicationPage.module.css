@@ -1,0 +1,6 @@
+.ApplicationPage {
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  width: clamp(375px, 100%, 1920px);
+}/*# sourceMappingURL=ApplicationPage.module.css.map */

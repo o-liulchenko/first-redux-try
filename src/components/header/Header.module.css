@@ -14,24 +14,24 @@
 }
 
 .headerContact {
-  color: #EC4D2F;
+  color: #007acc;
   text-decoration: none;
 }
 .headerContact:hover {
-  color: #B83922;
+  color: #04395e;
 }
 
 .headerSettingsBtn {
   padding: 16px 30px;
-  border: 2px solid #EC4D2F;
-  background: radial-gradient(50% 50% at 50% 50%, rgba(236, 77, 47, 0) 0%, rgba(236, 77, 47, 0.17) 100%);
+  border: 2px solid #007acc;
+  background: radial-gradient(50% 50% at 50% 50%, rgba(4, 57, 94, 0) 0%, rgba(4, 57, 94, 0.17) 100%);
   border-radius: 15px;
   color: white;
   padding: 10px 15px;
 }
 .headerSettingsBtn:hover {
-  background: #EC4D2F;
+  background: #007acc;
 }
 .headerSettingsBtn:active {
-  background: #B83922;
+  background: #04395e;
 }/*# sourceMappingURL=Header.module.css.map */

@@ -1,0 +1,23 @@
+@import '../../../mixins';
+
+.inpatientJournalContainer{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    row-gap: 10px;
+}
+.inpatientJournal{
+}
+.journalRow{
+    display: grid;
+    grid-template-columns: repeat(2, 110px) repeat(3, 1fr);
+    >span, b{
+        text-align: center;
+        border: 0.5px solid $redDark;
+    }
+}
+
+.filterButton{
+    @include button;
+
+}

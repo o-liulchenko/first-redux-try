@@ -1,5 +1,9 @@
+@import '../../mixins';
+
 .Main{
     width: clamp(375px, 100%, 1920px);
+    border-left: 1px solid $redLight;
+    border-right: 1px solid $redLight;
     display: flex;
     flex-direction: column;
 }
