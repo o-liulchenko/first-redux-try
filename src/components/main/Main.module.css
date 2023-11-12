@@ -1,7 +1,7 @@
 .Main {
   width: clamp(375px, 100%, 1920px);
-  border-left: 1px solid #007acc;
-  border-right: 1px solid #007acc;
+  border-left: 1px solid #3da9f2;
+  border-right: 1px solid #3da9f2;
   display: flex;
   flex-direction: column;
 }/*# sourceMappingURL=Main.module.css.map */

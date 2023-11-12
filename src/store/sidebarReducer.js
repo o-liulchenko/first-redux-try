@@ -1,23 +1,41 @@
-const SHOW_HIDE_SIDEBAR = 'SHOW-HIDE-SIDEBAR';
+const SIDEBAR_STYLE_SWITCH = 'SHOW-HIDE-SIDEBAR';
 
 let initialState = {
-    sidebarVisibility: 'show'
+    sidebarStyle: {
+        state: 'show',
+        styles: {
+            width: '250px'
+        }
+    }
 }
 
-export const sidebarVisibilitySwitch = () => {
+export const sidebarStyleSwitch = () => {
     return {
-        type: SHOW_HIDE_SIDEBAR
+        type: SIDEBAR_STYLE_SWITCH
     }
 }
 
 export const sidebarReducer = (state = initialState, action) => {
     switch (action.type) {
-        case SHOW_HIDE_SIDEBAR:
-            if(state.sidebarVisibility === 'show'){
-                return {...state, sidebarVisibility: 'hide'};
+        case SIDEBAR_STYLE_SWITCH:
+            if (state.sidebarStyle.state === 'show') {
+                return {
+                    ...state, sidebarStyle: {
+                        state: 'hide',
+                        styles: {
+                            width: '0px',
+                            padding: 0
+                        }
+                    }
+                };
             }
-            else{
-                return {...state, sidebarVisibility: 'show'};
+            else {
+                return {
+                    ...state, sidebarStyle: {
+                        state: 'show',
+                        styles: {}
+                    }
+                };
             }
         default:
             return state;

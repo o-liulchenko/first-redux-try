@@ -20,10 +20,11 @@ export const sidebarMenuItems = [
 ];
 
 export const userInfo = {
-    firstName: 'Сугуру',
-    lastName: 'Гето',
-    position: 'Заклинач духів',
-    photo: '👩‍⚕️👨‍⚕️'
+    id: 1488,
+    firstName: 'Кропивницький',
+    lastName: 'Олександр',
+    position: 'Травматолог',
+    photo: '👨‍⚕️'
 }
 
 export const contacts = {

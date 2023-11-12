@@ -11,7 +11,7 @@ export const Sidebar = (props) => {
     }
 
     return (
-        <div className={style.Sidebar}>
+        <div className={style.Sidebar} style={props.inlineStyles}>
             <div className={style.userInfo}>
                 <span className={style.userPhoto}>{props.userInfo.photo}</span>
                 <h1 className={style.userName}>{props.userInfo.firstName} {props.userInfo.lastName}</h1>

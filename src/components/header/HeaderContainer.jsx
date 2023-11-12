@@ -1,6 +1,6 @@
 import { useDispatch } from "react-redux";
 import { contacts } from "../../staticData/sidebarMenu";
-import { sidebarVisibilitySwitch } from "../../store/sidebarReducer";
+import { sidebarStyleSwitch } from "../../store/sidebarReducer";
 import { Header } from "./Header";
 
 
@@ -9,12 +9,12 @@ export const HeaderContainer = () => {
 
     const dispatch = useDispatch();
 
-    const sidebarVisibilitySwitchHandler = () => {
-        let action = sidebarVisibilitySwitch();
+    const sidebarStyleSwitchHandler = () => {
+        let action = sidebarStyleSwitch();
         dispatch(action);
     }
 
     return(
-        <Header contacts={contacts} sidebarVisibilitySwitchHandler={sidebarVisibilitySwitchHandler}/>
+        <Header contacts={contacts} sidebarStyleSwitchHandler={sidebarStyleSwitchHandler}/>
     )
 }

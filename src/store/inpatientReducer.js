@@ -1,55 +1,32 @@
-import { inpatientJournal, inpatientJournalFilter, onlyDischarged, onlyInHospital } from "../staticData/inpatientJournal"
+import axios from "axios";
 
-const SHOW_ONLY_DISCHARGED = 'SHOW-ONLY-DISCHARGED';
-const SHOW_ONLY_IN_HOSPITAL = 'SHOW-ONLY-IN-HOSPITAL';
+const FILTER_ACTION = 'FILTER-ACTION';
 
-const FILTER = 'FILTER';
+let initialState = {
+    inpatientJournal: await axios.get('https://my-json-server.typicode.com/o-liulchenko/first-redux-try/inpatientJournal').then(response => response.data)
+};
 
-let initialState = {};
-
-initialState.inpatientJournal = inpatientJournal;
-
-export const showOnlyDischargedAction = () => {
+export const filterAction = (filterBy, filterValue) => {
     return{
-        type: SHOW_ONLY_DISCHARGED
-    }
-}
-
-export const showOnlyInHospitalAction = () => {
-    return{
-        type: SHOW_ONLY_IN_HOSPITAL
-    }
-}
-
-export const filterDischargeAction = (filterValue) => {
-    return{
-        type: FILTER,
+        type: FILTER_ACTION,
         filter: {
-            by: 'discharge',
+            by: filterBy,
             value: filterValue
         }
     }
+}
 
+const filterInpatientJournal = (state = [], filter) => {
+    let result = state.filter(item => item[filter.by] === filter.value);
+    return result
 }
 
 export const inpatientReducer = (state = initialState, action) => {
     switch (action.type) {
-        case SHOW_ONLY_DISCHARGED:
+        case FILTER_ACTION:
             state = {
                 ...state,
-                inpatientJournal: onlyDischarged()
-            }
-            return state;
-        case SHOW_ONLY_IN_HOSPITAL:
-            state = {
-                ...state,
-                inpatientJournal: onlyInHospital()
-            }
-            return state;
-        case FILTER:
-            state = {
-                ...state,
-                inpatientJournal: inpatientJournalFilter(action.filter)
+                inpatientJournal: filterInpatientJournal(initialState.inpatientJournal, action.filter)
             }
             return state;
         default:

@@ -2,16 +2,16 @@ import styles from './Inpatient.module.css';
 
 export const Inpatient = (props) => {
 
-    const filterDischargeHandler = (value) => {
-        const action = props.filterDischarge(value);
+    const filterHandler = (filterBy, filterValue) => {
+        const action = props.filterActionCreator(filterBy, filterValue);
         props.dispatch(action);
     }
 
     return (
         <div className={styles.inpatientJournalContainer}>
             <div>
-                <button className={styles.filterButton} onClick={() => {filterDischargeHandler(false)}}>Пацієнти в стаціонарі</button>
-                <button className={styles.filterButton} onClick={() => {filterDischargeHandler(true)}}>Виписані пацієнти</button>
+                <button className={styles.filterButton} onClick={() => {filterHandler('discharged', false)}}>Пацієнти в стаціонарі</button>
+                <button className={styles.filterButton} onClick={() => {filterHandler('discharged', true)}}>Виписані пацієнти</button>
             </div>
             <div className={styles.inpatientJournal}>
                 <div className={styles.journalRow}>
@@ -20,15 +20,17 @@ export const Inpatient = (props) => {
                     <b>Пацієнт</b>
                     <b>Діагноз</b>
                     <b>Лікуючий лікар</b>
+                    <b>Відділення</b>
                 </div>
                 {
                     props.inpatientJournal.map(item =>
                         <div className={styles.journalRow} key={props.inpatientJournal.indexOf(item)}>
-                            <span className={styles.col1}>{item.medicalData.cardNumber}</span>
-                            <span className={styles.col2}>{item.medicalData.hospitalisationStartDate}</span>
-                            <span>{item.patient.lastName} {item.patient.firstName} {item.patient.secondName}</span>
-                            <span>{item.medicalData.diagnoses.main}</span>
-                            <span>{item.medicalData.careDoctor}</span>
+                            <span>{item.historyNumber}</span>
+                            <span>{item.startDate}</span>
+                            <span>{item.patient.name}</span>
+                            <span>{item.diagnose}</span>
+                            <span>{item.careEmployee.name}</span>
+                            <span>{item.departament}</span>
                         </div>
                     )
                 }

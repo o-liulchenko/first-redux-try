@@ -1,18 +1,19 @@
-$redLight: #007acc;
-$redDark: #04395e;
-$redRadial: radial-gradient(50% 50% at 50% 50%, rgba(4, 57, 94, 0.00) 0%, rgba(4, 57, 94, 0.17) 100%);
+$redLight: #3da9f2;
+$redDark: #1283d0;
+$bgLightColor: #2d2e2e;
 $bg: #1e1e1e;
+$mainFontColor: #cccccc;
+$fontColorForHover: #d7d7d7;
 
 @mixin button(){
-    padding: 16px 30px;
-    border: 2px solid $redLight;
-    background: $redRadial;
-    border-radius: 15px;
-    color: white;
+    padding: 10px 15px;
+    background-color: transparent;
+    color: #959595;
+    transition: 0.5s ease-out;
+    border-radius: 5px;
     &:hover{
-        background: $redLight;
-    }
-    &:active{
-        background: $redDark;
+        background-color: $bgLightColor;
+        color: $fontColorForHover;
+        transition: 0.5s;
     }
 }

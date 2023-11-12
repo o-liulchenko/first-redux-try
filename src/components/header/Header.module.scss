@@ -15,6 +15,7 @@
 .headerContact{
     color: $redLight;
     text-decoration: none;
+    transition: 0.5s;
     &:hover{
         color: $redDark;
     }

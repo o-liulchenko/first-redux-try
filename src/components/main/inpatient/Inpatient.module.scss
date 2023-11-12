@@ -10,7 +10,7 @@
 }
 .journalRow{
     display: grid;
-    grid-template-columns: repeat(2, 110px) repeat(3, 1fr);
+    grid-template-columns: repeat(2, 120px) repeat(4, minmax(100px, 1fr));
     >span, b{
         text-align: center;
         border: 0.5px solid $redDark;
