@@ -10,7 +10,9 @@
             "careEmployee": {
                 "name": "Прибило Світлана Вікторівна"
             },
-            "departament": "Терапевтичне відділення"
+            "departament": "Терапевтичне відділення",
+            "discharged": false,
+            "dischargeDate": null
         },
         {
             "historyNumber": 6298,
@@ -22,7 +24,9 @@
             "careEmployee": {
                 "name": "Кравчук Віктор Павлович"
             },
-            "departament": "Терапевтичне відділення"
+            "departament": "Терапевтичне відділення",
+            "discharged": true,
+            "dischargeDate": "11.11.2023"
         },
         {
             "historyNumber": 3775,
@@ -34,7 +38,9 @@
             "careEmployee": {
                 "name": "Кравчук Віктор Павлович"
             },
-            "departament": "Хірургічне відділення"
+            "departament": "Хірургічне відділення",
+            "discharged": false,
+            "dischargeDate": null
         },
         {
             "historyNumber": 7480,
@@ -46,7 +52,9 @@
             "careEmployee": {
                 "name": "Бойко Андрій Олександрович"
             },
-            "departament": "Терапевтичне відділення"
+            "departament": "Терапевтичне відділення",
+            "discharged": true,
+            "dischargeDate": "10.11.2023"
         },
         {
             "historyNumber": 8998,
@@ -58,7 +66,9 @@
             "careEmployee": {
                 "name": "Прибило Світлана Вікторівна"
             },
-            "departament": "Хірургічне відділення"
+            "departament": "Хірургічне відділення",
+            "discharged": false,
+            "dischargeDate": null
         }
     ]
 }
