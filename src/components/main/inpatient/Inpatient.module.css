@@ -7,11 +7,22 @@
 
 .journalRow {
   display: grid;
-  grid-template-columns: repeat(2, 120px) repeat(4, minmax(100px, 1fr));
+  grid-template-columns: repeat(2, 120px) repeat(4, minmax(100px, 1fr)) 100px;
 }
 .journalRow > span, .journalRow b {
   text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border: 0.5px solid #1283d0;
+}
+
+.discharged {
+  color: #d9543d;
+}
+
+.notDischarged {
+  color: #54bd75;
 }
 
 .filterButton {

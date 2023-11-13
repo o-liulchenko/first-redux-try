@@ -10,11 +10,20 @@
 }
 .journalRow{
     display: grid;
-    grid-template-columns: repeat(2, 120px) repeat(4, minmax(100px, 1fr));
+    grid-template-columns: repeat(2, 120px) repeat(4, minmax(100px, 1fr)) 100px;
     >span, b{
         text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         border: 0.5px solid $redDark;
     }
+}
+.discharged{
+    color: $errorColor;
+}
+.notDischarged{
+    color: $successColor;
 }
 
 .filterButton{

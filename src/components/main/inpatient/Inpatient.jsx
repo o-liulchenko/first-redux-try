@@ -6,12 +6,17 @@ export const Inpatient = (props) => {
         const action = props.filterActionCreator(filterBy, filterValue);
         props.dispatch(action);
     }
+    const showAllHandler = () => {
+        const action = props.showAllAction();
+        props.dispatch(action);
+    }
 
     return (
         <div className={styles.inpatientJournalContainer}>
             <div>
-                <button className={styles.filterButton} onClick={() => {filterHandler('discharged', false)}}>Пацієнти в стаціонарі</button>
-                <button className={styles.filterButton} onClick={() => {filterHandler('discharged', true)}}>Виписані пацієнти</button>
+                <button className={styles.filterButton} onClick={() => { showAllHandler() }}>Всі пацієнти</button>
+                <button className={styles.filterButton} onClick={() => { filterHandler('discharged', false) }}>Пацієнти в стаціонарі</button>
+                <button className={styles.filterButton} onClick={() => { filterHandler('discharged', true) }}>Виписані пацієнти</button>
             </div>
             <div className={styles.inpatientJournal}>
                 <div className={styles.journalRow}>
@@ -21,6 +26,7 @@ export const Inpatient = (props) => {
                     <b>Діагноз</b>
                     <b>Лікуючий лікар</b>
                     <b>Відділення</b>
+                    <b>Статус</b>
                 </div>
                 {
                     props.inpatientJournal.map(item =>
@@ -31,6 +37,9 @@ export const Inpatient = (props) => {
                             <span>{item.diagnose}</span>
                             <span>{item.careEmployee.name}</span>
                             <span>{item.departament}</span>
+                            {
+                                item.discharged ? <span className={styles.discharged}>Виписаний</span> : <span className={styles.notDischarged}>У відділенні</span>
+                            }
                         </div>
                     )
                 }

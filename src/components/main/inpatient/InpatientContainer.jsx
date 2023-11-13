@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import { Inpatient } from "./Inpatient";
-import { filterAction } from "../../../store/inpatientReducer";
+import { filterAction, showAllActionCreator } from "../../../store/inpatientReducer";
 
 export const InpatientContainer = () => {
 
@@ -8,6 +8,6 @@ export const InpatientContainer = () => {
     const dispatch = useDispatch();
     
     return(
-        <Inpatient inpatientJournal={inpatientJournal} dispatch={dispatch} filterActionCreator={filterAction}/>
+        <Inpatient inpatientJournal={inpatientJournal} dispatch={dispatch} filterActionCreator={filterAction} showAllAction={showAllActionCreator}/>
     )
 }
