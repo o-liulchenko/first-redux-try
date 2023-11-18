@@ -4,7 +4,10 @@ const FILTER_ACTION = 'FILTER-ACTION';
 const SHOW_ALL = 'SHOW-ALL';
 
 let initialState = {
-    inpatientJournal: await axios.get('https://my-json-server.typicode.com/o-liulchenko/first-redux-try/inpatientJournal').then(response => response.data)
+    dataFromServer: await axios.get('https://my-json-server.typicode.com/o-liulchenko/first-redux-try/inpatientJournal').then(response => response.data),
+    inpatientJournal: [],
+    filters: [],
+    section: 'all'
 };
 
 export const showAllActionCreator = () => {

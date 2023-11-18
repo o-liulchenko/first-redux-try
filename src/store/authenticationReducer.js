@@ -2,7 +2,7 @@ const AUTHENTICATION_CREATE = 'AUTHENTICATION-CREATE';
 
 let initialState = {
     authenticationStatus: 'none',
-    profile: {}
+    user: null
 }
 
 export const authenticationCreateAction = (userProfile) => {
@@ -15,8 +15,7 @@ export const authenticationCreateAction = (userProfile) => {
 export const authenticationReducer = (state = initialState, action) => {
     switch (action.type) {
         case AUTHENTICATION_CREATE:
-            let userProfile = action.userProfile;
-            return {...state, profile: userProfile};
+            return {...state, user: action.userProfile, authenticationStatus: 'success'};
         default:
             return state;
     }

@@ -10,8 +10,10 @@ export const Sidebar = (props) => {
         props.navigate(link);
     }
 
+    console.log(props);
+
     return (
-        <div className={style.Sidebar} style={props.inlineStyles}>
+        <div className={`${style.Sidebar} ${props.sidebarVisibility ? style.sidebarVisible : style.sidebarInvisible}`}>
             <div className={style.userInfo}>
                 <span className={style.userPhoto}>{props.userInfo.photo}</span>
                 <h1 className={style.userName}>{props.userInfo.firstName} {props.userInfo.lastName}</h1>

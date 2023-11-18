@@ -1,4 +1,5 @@
 import styles from './Inpatient.module.css';
+import { JournalList } from './JournalList';
 
 export const Inpatient = (props) => {
 
@@ -28,21 +29,7 @@ export const Inpatient = (props) => {
                     <b>Відділення</b>
                     <b>Статус</b>
                 </div>
-                {
-                    props.inpatientJournal.map(item =>
-                        <div className={styles.journalRow} key={props.inpatientJournal.indexOf(item)}>
-                            <span>{item.historyNumber}</span>
-                            <span>{item.startDate}</span>
-                            <span>{item.patient.name}</span>
-                            <span>{item.diagnose}</span>
-                            <span>{item.careEmployee.name}</span>
-                            <span>{item.departament}</span>
-                            {
-                                item.discharged ? <span className={styles.discharged}>Виписаний</span> : <span className={styles.notDischarged}>У відділенні</span>
-                            }
-                        </div>
-                    )
-                }
+                <JournalList journalItems={props.inpatientJournal} /> 
             </div>
         </div>
     )
