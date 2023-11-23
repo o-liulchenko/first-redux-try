@@ -23,9 +23,9 @@ export const AuthPage = () => {
                             case user.emailVerified:
                                 alert('Електронну пошту не підтверджено');
                                 break;
-                            case user.displayName:
-                                alert('Не завершено реєстрацію користувача');
-                                break;
+                            // case user.displayName:
+                            //     alert('Не завершено реєстрацію користувача');
+                            //     break;
                             default:
                                 const action = authenticationCreateAction(user);
                                 dispatch(action);

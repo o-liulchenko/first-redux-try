@@ -12,8 +12,10 @@ export const SidebarContainer = () => {
     const sidebarVisibility = useSelector(state => state.sidebar.sidebarStyle.state);
     const dispatch = useDispatch();
 
+    const user = useSelector(state => state.authentication.user);
+
     return(
-        <Sidebar userInfo={userInfo} sidebarMenuItems={sidebarMenuItems} navigate={navigate} inlineStyles={sidebarStyles} sidebarVisibility={sidebarVisibility}/>
+        <Sidebar userInfo={userInfo} user={user} sidebarMenuItems={sidebarMenuItems} navigate={navigate} inlineStyles={sidebarStyles} sidebarVisibility={sidebarVisibility}/>
     )
 
 }

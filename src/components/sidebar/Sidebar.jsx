@@ -15,9 +15,8 @@ export const Sidebar = (props) => {
     return (
         <div className={`${style.Sidebar} ${props.sidebarVisibility ? style.sidebarVisible : style.sidebarInvisible}`}>
             <div className={style.userInfo}>
-                <span className={style.userPhoto}>{props.userInfo.photo}</span>
-                <h1 className={style.userName}>{props.userInfo.firstName} {props.userInfo.lastName}</h1>
-                <h2 className={style.userPosition}>{props.userInfo.position}</h2>
+                <span className={style.userPhoto}>{props.user.email}</span>
+                <h1 className={style.userName}>{props.user.displayName === null ? 'No name' : props.user.displayName}</h1>
                 <button className={style.userChangePositionBtn} onClick={() => { changePositionHandler() }}>Змінити посаду</button>
             </div>
             <nav>
