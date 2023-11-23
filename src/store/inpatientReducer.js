@@ -2,9 +2,9 @@ import axios from "axios";
 
 const FILTER_ACTION = 'FILTER-ACTION';
 const SHOW_ALL = 'SHOW-ALL';
-
+// await axios.get('https://my-json-server.typicode.com/o-liulchenko/first-redux-try/inpatientJournal').then(response => response.data)
 let initialState = {
-    dataFromServer: await axios.get('https://my-json-server.typicode.com/o-liulchenko/first-redux-try/inpatientJournal').then(response => response.data),
+    dataFromServer: [],
     inpatientJournal: [],
     filters: [],
     section: 'all'

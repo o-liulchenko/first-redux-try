@@ -2,14 +2,13 @@
 import { useSelector } from 'react-redux';
 import style from './App.module.css';
 import { ApplicationPageContainer } from './pages/applicationPage/ApplicationPageContainer';
-import { LoginPage } from './pages/loginPage/LoginPage';
+import { AuthPage } from './pages/authPage/AuthPage';
 
 const App = (props) => {
 
   const user = useSelector(state => state.authentication.user);
-  console.log();
   return (
-    user ? <ApplicationPageContainer /> : <LoginPage />
+    user ? <ApplicationPageContainer /> : <AuthPage />
   );
 };
 
